@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-07-22T03:19:42.500775",
+  "peer_network": {
+    "total_peers": 200,
+    "network_density": 0.09005025125628141,
+    "avg_clustering": 0.4192750198249724,
+    "connected_components": 1,
+    "avg_degree": 17.92
+  },
+  "energy_analysis": {
+    "avg_peer_score": 0.12160476539879607,
+    "score_std": 0.062402890516348085,
+    "energy_correlation": 0.05473435618339568,
+    "top_peers": [
+      {
+        "peer_id": 155,
+        "peer_score": 0.30151074931905564,
+        "upload_speed_mbps": 22.34008660323586,
+        "energy_consumption_w": 74.09383132670938
+      },
+      {
+        "peer_id": 151,
+        "peer_score": 0.29299283268630133,
+        "upload_speed_mbps": 20.11857549974633,
+        "energy_consumption_w": 68.66575989347388
+      },
+      {
+        "peer_id": 193,
+        "peer_score": 0.29160538604594294,
+        "upload_speed_mbps": 17.564194246213308,
+        "energy_consumption_w": 60.23274975945073
+      },
+      {
+        "peer_id": 121,
+        "peer_score": 0.2818792990536125,
+        "upload_speed_mbps": 19.43792983177086,
+        "energy_consumption_w": 68.95834457170915
+      },
+      {
+        "peer_id": 183,
+        "peer_score": 0.26775337695683665,
+        "upload_speed_mbps": 20.820643741013942,
+        "energy_consumption_w": 77.76052715992579
+      },
+      {
+        "peer_id": 119,
+        "peer_score": 0.25920742043553385,
+        "upload_speed_mbps": 21.270931555481898,
+        "energy_consumption_w": 82.06142987627965
+      },
+      {
+        "peer_id": 51,
+        "peer_score": 0.25556347614020364,
+        "upload_speed_mbps": 21.709871902818932,
+        "energy_consumption_w": 84.94903978731595
+      },
+      {
+        "peer_id": 105,
+        "peer_score": 0.24893084847290936,
+        "upload_speed_mbps": 21.14731940726464,
+        "energy_consumption_w": 84.9525863788877
+      },
+      {
+        "peer_id": 8,
+        "peer_score": 0.24230840308638263,
+        "upload_speed_mbps": 19.30574940389169,
+        "energy_consumption_w": 79.6742876350401
+      },
+      {
+        "peer_id": 44,
+        "peer_score": 0.22908299176490815,
+        "upload_speed_mbps": 19.410440790639406,
+        "energy_consumption_w": 84.7310428465112
+      }
+    ]
+  },
+  "datacenter_policies": {
+    "policy_a": {
+      "energy_kwh": 16.458306528324638,
+      "latency_ms": 161.56289962177044,
+      "efficiency": "high"
+    },
+    "policy_b": {
+      "energy_kwh": 24.68745979248696,
+      "latency_ms": 119.41605624217816,
+      "efficiency": "low"
+    }
+  },
+  "recommendations": {
+    "peer_selection": "Prioritize peers with scores > 0.12",
+    "network_optimization": "Maintain connectivity density around 0.090",
+    "datacenter_policy": "Use Policy A for energy-sensitive workloads, Policy B for latency-sensitive workloads"
+  }
+}
