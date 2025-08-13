@@ -1,0 +1,29 @@
+# ----- basics -----
+random.seed = 12345
+simulation.cycles = 50
+network.size = 200
+
+# ----- linkable & wiring (simple k-out overlay) -----
+protocol.lnk = peersim.core.IdleProtocol
+init.wire = peersim.dynamics.WireKOut
+init.wire.k = 8
+init.wire.protocol = lnk
+
+# ----- our energy protocol -----
+protocol.ener = EnergyProtocol
+protocol.ener.step = 1
+protocol.ener.base_energy = 60
+protocol.ener.energy_per_mb = 0.8
+protocol.ener.speed_min = 5
+protocol.ener.speed_max = 25
+
+# ----- run the cycle-driven engine -----
+control.cycle = peersim.edsim.CDScheduler
+control.cycle.protocol = ener
+control.cycle.step = 1
+
+# ----- logger: writes peer_metrics.csv every cycle -----
+control.logger = EnergyLogger
+control.logger.protocol = ener
+control.logger.out = peer_metrics.csv
+control.logger.step = 1
