@@ -1,0 +1,39 @@
+# Enhanced Energy-Aware Protocol Configuration
+# Includes validation and statistical analysis features
+
+# ----- Basic Simulation Parameters -----
+random.seed = 12345
+simulation.cycles = 100
+network.size = 300
+
+# ----- Network Topology -----
+protocol.lnk = peersim.core.IdleProtocol
+init.wire = peersim.dynamics.WireKOut
+init.wire.k = 10
+init.wire.protocol = lnk
+
+# ----- Enhanced Energy Protocol -----
+protocol.energy = EnhancedEnergyProtocol
+protocol.energy.step = 1
+protocol.energy.base_energy = 60
+protocol.energy.energy_variance = 20
+protocol.energy.speed_min = 5
+protocol.energy.speed_max = 25
+protocol.energy.efficiency_weight = 0.7
+
+# ----- Cycle-driven Execution -----
+control.cycle = peersim.edsim.CDScheduler
+control.cycle.protocol = energy
+control.cycle.step = 1
+
+# ----- Validation Logger -----
+control.validator = ValidationLogger
+control.validator.protocol = energy
+control.validator.output_file = validation_metrics.csv
+control.validator.stats_file = statistical_analysis.csv
+control.validator.step = 1
+
+# ----- Performance Monitor (Optional) -----
+control.monitor = peersim.vector.LinearDistribution
+control.monitor.protocol = energy
+control.monitor.step = 10

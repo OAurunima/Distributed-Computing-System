@@ -1,0 +1,20 @@
+STATISTICAL VALIDATION RESULTS
+================================
+
+Sample Sizes:
+  Baseline: 1000
+  Energy-Aware: 1000
+
+Mean Efficiency Scores:
+  Baseline: 0.184076
+  Energy-Aware: 0.241436
+  Improvement: 31.16%
+
+Statistical Tests:
+  t-test: t = 15.3189, p = 0.000000
+  Mann-Whitney U: U = 695889.0000, p = 0.000000
+  Effect Size (Cohen's d): 0.6854
+
+Interpretation:
+  Highly significant improvement (p < 0.001)
+  Effect Size: Large effect

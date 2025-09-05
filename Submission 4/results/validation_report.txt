@@ -1,0 +1,18 @@
+=== EXPLAINABLE AI VALIDATION REPORT ===
+
+1. STATISTICAL TESTS
+Score Normality (Shapiro-Wilk): p-value: 0.000000, Normal: False
+Energy-Speed Correlation: r: 0.1317, p-value: 0.000000
+Variance Homogeneity: p-value: 0.000000, Homogeneous: False
+
+2. MODEL VALIDATION
+Residual Normality: p-value: 0.000000
+Residual Variance: 0.000000
+CV Score Stability: Mean: 0.9999, Std: 0.0001
+
+3. PERFORMANCE ANALYSIS
+Score Mean: 0.244807
+Score Std: 0.114091
+Score Skewness: 1.0951
+Score Kurtosis: 2.4937
+Speed Distribution: {'High': np.float64(0.255), 'Low': np.float64(0.2548), 'Medium': np.float64(0.2534), 'Very_High': np.float64(0.2368)}
